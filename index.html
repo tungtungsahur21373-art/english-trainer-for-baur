@@ -30,7 +30,19 @@ footer{text-align:center;color:#708bb1;margin:32px 0 8px;font-size:14px}.rocket{
 </div>
 <script>
 const START_WORDS = [
-["Speak","говорить"],["Learn","учить что-то"],["Study","изучать где-то / учиться"],["Much","много (с неисчисляемыми)"],["Many","много (с исчисляемыми)"],["Really","действительно"],["Often","часто"],["Read","читать"],["Do","делать"],["Can","мочь / уметь"],["Want","хотеть"],["Thing","вещь"],["Fluently","бегло"],["Correctly","правильно"],["Without","без"],["Mistake","ошибка"],["I’d like to","я бы хотел"],["My","мой / моя / моё"],["Later","позже"],["Different","разный / другой"],["Think","думать"],["Watch","смотреть"],["Soon","скоро"],["Together","вместе"],["Cost","стоить"],["Teach","учить кого-то"],["Yesterday","вчера"],["Today","сегодня"],["Tomorrow","завтра"],["but","но"],["Better","лучше"],["Need","нуждаться / нужно"],["more","больше / ещё"],["now","сейчас"],["service","сервис / обслуживание"],["spend","тратить / проводить время"],["about","о / около"],["talk","разговаривать о чём-то"],["lets","давай"],["another","ещё один / другой"],["other","другой / остальные"],["i don’t","я не…"],["he doesn’t","он не…"],["say","сказать / говорить"],["take","брать"],["use","использовать"],["ask","спрашивать / просить"],["give","давать"],["when","когда"]
+["Speak","говорить"],["Learn","учить что-то"],["Study","изучать где-то / учиться"],["Much","много (с неисчисляемыми)"],["Many","много (с исчисляемыми)"],["Really","действительно"],["Often","часто"],["Read","читать"],["Do","делать"],["Can","мочь / уметь"],["Want","хотеть"],["Thing","вещь"],["Fluently","бегло"],["Correctly","правильно"],["Without","без"],["Mistake","ошибка"],["I’d like to","я бы хотел"],["My","мой / моя / моё"],["Later","позже"],["Different","разный / другой"],["Think","думать"],["Watch","смотреть"],["Soon","скоро"],["Together","вместе"],["Cost","стоить"],["Teach","учить кого-то"],["Yesterday","вчера"],["Today","сегодня"],["Tomorrow","завтра"],["but","но"],["Better","лучше"],["Need","нуждаться / нужно"],["more","больше / ещё"],["now","сейчас"],["service","сервис / обслуживание"],["spend","тратить / проводить время"],["about","о / около"],["talk","разговаривать о чём-то"],["lets","давай"],["another","ещё один / другой"],["other","другой / остальные"],["i don’t","я не…"],["he doesn’t","он не…"],["say","сказать / говорить"],["take","брать"],["use","использовать"],["ask","спрашивать / просить"],["give","давать"],["when","когда"],
+["I am","я есть / я являюсь"],["You are","ты / вы есть"],["He is","он есть"],["She is","она есть"],["We are","мы есть"],["They are","они есть"],
+["Hello","привет / здравствуйте"],["Good morning","доброе утро"],["Good evening","добрый вечер"],["Good night","спокойной ночи"],["Goodbye","до свидания"],["Please","пожалуйста"],["Thank you","спасибо"],["You’re welcome","пожалуйста / не за что"],["Sorry","извини / простите"],["Excuse me","извините / простите"],
+["Yes","да"],["No","нет"],["Maybe","может быть"],["Okay","хорошо / ладно"],["Of course","конечно"],["I understand","я понимаю"],["I don’t understand","я не понимаю"],["I know","я знаю"],["I don’t know","я не знаю"],["I need help","мне нужна помощь"],["Can you help me?","ты можешь мне помочь?"],
+["I want to learn","я хочу учиться"],["I want to work","я хочу работать"],["I am learning English","я изучаю английский"],["I speak Russian","я говорю по-русски"],["What is your name?","как тебя зовут?"],["My name is…","меня зовут…"],["How are you?","как дела?"],["I am fine","у меня всё хорошо"],["Where are you from?","откуда ты?"],["I am from Kazakhstan","я из Казахстана"],
+["What","что / какой"],["Who","кто"],["Where","где / куда"],["Why","почему"],["How","как"],["Which","который / какой"],["Here","здесь"],["There","там"],["This","это / этот"],["That","то / тот"],
+["House","дом"],["Home","дом / дома"],["Room","комната"],["Door","дверь"],["Water","вода"],["Food","еда"],["Bread","хлеб"],["Coffee","кофе"],["Tea","чай"],["Money","деньги"],["Time","время"],["Day","день"],["Week","неделя"],["Month","месяц"],["Year","год"],
+["Work","работа / работать"],["Job","работа / должность"],["Worker","рабочий"],["Boss","начальник"],["Team","команда"],["Break","перерыв"],["Start","начинать"],["Finish","заканчивать"],["Open","открывать / открытый"],["Close","закрывать"],["Go","идти / ехать"],["Come","приходить"],["Leave","уходить / уезжать"],["Arrive","прибывать"],["Wait","ждать"],
+["Good","хороший"],["Bad","плохой"],["Big","большой"],["Small","маленький"],["Easy","лёгкий / простой"],["Difficult","трудный"],["New","новый"],["Old","старый"],["Hot","горячий / жаркий"],["Cold","холодный"],["Happy","счастливый"],["Tired","уставший"],["Busy","занятый"],["Ready","готовый"],
+["One","один"],["Two","два"],["Three","три"],["Four","четыре"],["Five","пять"],["Six","шесть"],["Seven","семь"],["Eight","восемь"],["Nine","девять"],["Ten","десять"],
+["Monday","понедельник"],["Tuesday","вторник"],["Wednesday","среда"],["Thursday","четверг"],["Friday","пятница"],["Saturday","суббота"],["Sunday","воскресенье"],
+["I have","у меня есть"],["I like","мне нравится"],["I live","я живу"],["I work","я работаю"],["I can","я могу / умею"],["I need","мне нужно"],["I have to","я должен / мне нужно"],["I am ready","я готов"],["Let’s go","пойдём"],["See you later","увидимся позже"],
+["I get up early","я рано встаю"],["I go to work","я иду на работу"],["I am at work","я на работе"],["I finish work at six","я заканчиваю работу в шесть"],["I need a break","мне нужен перерыв"],["I am tired today","я сегодня устал"],["I am busy now","я сейчас занят"],["I am ready to start","я готов начинать"],["I want to learn English","я хочу учить английский"],["I want to speak English","я хочу говорить по-английски"],["I speak a little English","я немного говорю по-английски"],["Please speak slowly","пожалуйста, говорите медленно"],["Can you repeat that?","можете повторить?"],["Could you help me?","не могли бы вы мне помочь?"],["I don't understand this","я этого не понимаю"],["I understand now","теперь я понимаю"],["What does it mean?","что это означает?"],["How do you say this in English?","как сказать это по-английски?"],["How much does it cost?","сколько это стоит?"],["Where is the bus stop?","где автобусная остановка?"],["Where do you live?","где ты живёшь?"],["Where are you from?","откуда ты?"],["I am from Kazakhstan","я из Казахстана"],["My name is Baur","меня зовут Баур"],["Nice to meet you","приятно познакомиться"],["Have a nice day","хорошего дня"],["See you tomorrow","увидимся завтра"],["I need some water","мне нужна вода"],["I would like some tea","я бы хотел чаю"],["I am hungry","я голоден"],["I am thirsty","я хочу пить"],["I don't have time","у меня нет времени"],["I have a question","у меня есть вопрос"],["I need more practice","мне нужно больше практики"],["I made a mistake","я совершил ошибку"],["Don't worry","не волнуйся"],["Wait a moment, please","подождите минутку, пожалуйста"],["I will be back soon","я скоро вернусь"],["Let's start now","давай начнём сейчас"],["What time is it?","который час?"],["Today is Monday","сегодня понедельник"],["I work every day","я работаю каждый день"],["I work with a team","я работаю в команде"],["I check my work","я проверяю свою работу"],["Safety is important","безопасность важна"],["Be careful","будь осторожен"],["I need my tools","мне нужны мои инструменты"],["The machine is ready","машина готова"],["Start the machine","запусти машину"],["Stop the machine","останови машину"],["The work is finished","работа закончена"],["I am learning new words","я учу новые слова"],["I study every day","я занимаюсь каждый день"],["I want to work abroad","я хочу работать за границей"]
 ];
 const $=s=>document.querySelector(s);
 const main=$("#main");
@@ -38,7 +50,10 @@ const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"
 let words, stats, usedQuestions, currentQuiz=null, editingId=null;
 function load(){
  try{words=JSON.parse(localStorage.getItem("et_words"))||[];}catch{words=[]}
- if(!words.length){words=START_WORDS.map((w,i)=>({id:"base"+i,en:w[0],ru:w[1],example:"",note:"",base:true}));saveWords();}
+ const known=new Set(words.map(w=>(String(w.en||"").trim().toLowerCase()+"|"+String(w.ru||"").trim().toLowerCase())));
+ let added=0;
+ START_WORDS.forEach((w,i)=>{const key=w[0].trim().toLowerCase()+"|"+w[1].trim().toLowerCase();if(!known.has(key)){words.push({id:"base_v2_"+i,en:w[0],ru:w[1],example:"",note:"",base:true});known.add(key);added++;}});
+ if(added||!localStorage.getItem("et_words"))saveWords();
  try{stats=JSON.parse(localStorage.getItem("et_stats"))||{tests:0,correct:0,best:0,streak:0,history:[]};}catch{stats={tests:0,correct:0,best:0,streak:0,history:[]}}
  try{usedQuestions=JSON.parse(localStorage.getItem("et_used"))||[];}catch{usedQuestions=[]}
 }
@@ -50,26 +65,60 @@ function shell(title,body){main.innerHTML=`<section class="panel"><div class="to
 function renderHome(){
  main.innerHTML=`<div class="menu">
  <button class="menu-card" onclick="startQuiz()"><span class="ico mint">▶</span><span class="copy"><strong>Начать тест</strong><small>20 вопросов по твоим словам</small></span><span class="chev mint">›</span></button>
- <button class="menu-card" onclick="renderAdd()"><span class="ico blue">＋</span><span class="copy"><strong>Добавить слово</strong><small>Слово, перевод и пример</small></span><span class="chev blue">›</span></button>
+ <button class="menu-card" onclick="renderAdd()"><span class="ico blue">＋</span><span class="copy"><strong>Добавить слово</strong><small>Слово, фраза или предложение — перевод автоматически</small></span><span class="chev blue">›</span></button>
  <button class="menu-card" onclick="renderRating()"><span class="ico gold">🏆</span><span class="copy"><strong>Рейтинг</strong><small>Твои результаты и достижения</small></span><span class="chev gold">›</span></button>
  </div>`;
 }
 function renderAdd(){
  editingId=null;
  shell("Добавить слово",`<form id="wordForm">
- <label class="field">Английское слово или фраза *<input id="en" required maxlength="120" placeholder="например, Speak"></label>
- <label class="field">Перевод на русский *<input id="ru" required maxlength="220" placeholder="например, говорить"></label>
+ <label class="field">Тип материала *<select id="kind" required><option value="word">Слово</option><option value="phrase">Фраза</option><option value="sentence">Предложение</option></select></label>
+ <label class="field">Английское слово, фраза или предложение *<input id="en" required maxlength="120" placeholder="например, I want to learn"></label>
+ <label class="field">Перевод на русский *<input id="ru" maxlength="220" placeholder="Перевод появится автоматически"></label>
+ <button class="btn secondary" type="button" id="translateBtn">🌐 Перевести автоматически</button>
+ <p class="note" id="translateStatus">Введи английское слово или предложение — перевод можно получить автоматически через интернет.</p>
  <label class="field">Пример на английском (необязательно)<textarea id="example" placeholder="I speak English."></textarea></label>
  <label class="field">Заметка (необязательно)<textarea id="note" placeholder="Подсказка для себя"></textarea></label>
- <button class="btn" type="submit">＋ Сохранить слово</button></form>
- <p class="note">Новое слово сразу попадёт в будущие тесты. Ты можешь в любой момент изменить или удалить его.</p>
+ <button class="btn" type="submit">＋ Сохранить</button></form>
+ <p class="note">Выбери тип: слово, фраза или предложение. Материал сразу попадёт в будущие тесты. Его можно изменить или удалить.</p>
  <div class="word-list">${words.slice().reverse().map(w=>`<div class="word-row"><div class="word-info"><strong>${esc(w.en)}</strong><small>${esc(w.ru)}</small></div><button class="mini" onclick="editWord('${w.id}')">Изм.</button><button class="mini delete" onclick="deleteWord('${w.id}')">×</button></div>`).join("")}</div>`);
- $("#wordForm").addEventListener("submit",e=>{e.preventDefault();let en=$("#en").value.trim(),ru=$("#ru").value.trim();if(!en||!ru)return;words.push({id:"w"+Date.now(),en,ru,example:$("#example").value.trim(),note:$("#note").value.trim(),base:false});saveWords();renderAdd();});
+ const translateBtn=$("#translateBtn"), enInput=$("#en"), ruInput=$("#ru"), status=$("#translateStatus");
+ translateBtn.addEventListener("click",()=>translateInto(enInput,ruInput,status,translateBtn));
+ enInput.addEventListener("blur",()=>{if(enInput.value.trim()&&!ruInput.value.trim())translateInto(enInput,ruInput,status,translateBtn)});
+ $("#wordForm").addEventListener("submit",async e=>{e.preventDefault();let en=enInput.value.trim(),ru=ruInput.value.trim();if(!en)return;if(!ru){await translateInto(enInput,ruInput,status,translateBtn);ru=ruInput.value.trim()}if(!ru){status.textContent="Перевод не получен. Проверь интернет или введи перевод вручную.";return;}const kind=$("#kind").value;
+  const item={id:"w"+Date.now(),en,ru,kind,example:$("#example").value.trim(),note:$("#note").value.trim(),base:false};
+  // Для одного добавленного слова автоматически создаём фразу для практики.
+  if(kind==="word" && !/[.!?]/.test(en) && en.split(/\s+/).length===1 && !item.example){
+   item.example=`I want to learn the word "${en}".`;
+   item.exampleRu=`Я хочу выучить слово «${ru}».`;
+   status.textContent="✓ Слово сохранено. Для теста автоматически создана фраза: "+item.example;
+  }
+  words.push(item);saveWords();renderAdd();});
 }
 function editWord(id){
  let w=words.find(x=>x.id===id);if(!w)return;editingId=id;
- shell("Редактировать слово",`<form id="editForm"><label class="field">Английское слово или фраза *<input id="en" required value="${esc(w.en)}"></label><label class="field">Перевод *<input id="ru" required value="${esc(w.ru)}"></label><label class="field">Пример<textarea id="example">${esc(w.example||"")}</textarea></label><label class="field">Заметка<textarea id="note">${esc(w.note||"")}</textarea></label><button class="btn" type="submit">Сохранить изменения</button></form>`);
- $("#editForm").addEventListener("submit",e=>{e.preventDefault();w.en=$("#en").value.trim();w.ru=$("#ru").value.trim();w.example=$("#example").value.trim();w.note=$("#note").value.trim();saveWords();renderAdd()});
+ shell("Редактировать материал",`<form id="editForm"><label class="field">Тип материала *<select id="kind"><option value="word" ${((w.kind||"word")==="word")?"selected":""}>Слово</option><option value="phrase" ${((w.kind||"word")==="phrase")?"selected":""}>Фраза</option><option value="sentence" ${((w.kind||"word")==="sentence")?"selected":""}>Предложение</option></select></label><label class="field">Английское слово, фраза или предложение *<input id="en" required value="${esc(w.en)}"></label><label class="field">Перевод *<input id="ru" value="${esc(w.ru)}"></label><button class="btn secondary" type="button" id="translateBtn">🌐 Перевести автоматически</button><p class="note" id="translateStatus">Можно автоматически обновить перевод через интернет.</p><label class="field">Пример<textarea id="example">${esc(w.example||"")}</textarea></label><label class="field">Заметка<textarea id="note">${esc(w.note||"")}</textarea></label><button class="btn" type="submit">Сохранить изменения</button></form>`);
+ const translateBtn=$("#translateBtn"), enInput=$("#en"), ruInput=$("#ru"), status=$("#translateStatus");
+ translateBtn.addEventListener("click",()=>translateInto(enInput,ruInput,status,translateBtn));
+ enInput.addEventListener("blur",()=>{if(enInput.value.trim()&&enInput.value.trim()!==w.en)translateInto(enInput,ruInput,status,translateBtn)});
+ $("#editForm").addEventListener("submit",e=>{e.preventDefault();w.en=$("#en").value.trim();w.ru=$("#ru").value.trim();w.kind=$("#kind").value;w.example=$("#example").value.trim();w.note=$("#note").value.trim();saveWords();renderAdd()});
+}
+
+async function translateInto(enInput,ruInput,status,button){
+ const source=enInput.value.trim();
+ if(!source){status.textContent="Сначала введи английское слово или предложение.";enInput.focus();return;}
+ const oldLabel=button.textContent;button.disabled=true;button.textContent="Перевожу…";status.textContent="Подключаюсь к онлайн-переводчику…";
+ try{
+  const url="https://api.mymemory.translated.net/get?q="+encodeURIComponent(source)+"&langpair=en|ru";
+  const response=await fetch(url,{method:"GET"});
+  if(!response.ok)throw new Error("network");
+  const data=await response.json();
+  const translated=String(data?.responseData?.translatedText||"").trim();
+  if(!translated||data?.responseStatus&&Number(data.responseStatus)!==200)throw new Error("empty");
+  ruInput.value=translated;
+  status.textContent="✓ Перевод готов. Проверь его — онлайн-переводчик иногда ошибается.";
+ }catch(err){status.textContent="Не удалось получить перевод. Проверь интернет и попробуй ещё раз или введи перевод вручную.";}
+ finally{button.disabled=false;button.textContent=oldLabel;}
 }
 function deleteWord(id){let w=words.find(x=>x.id===id);if(!w)return;if(!confirm(`Удалить слово «${w.en}»?`))return;words=words.filter(x=>x.id!==id);saveWords();renderAdd()}
 function renderRating(){
@@ -82,12 +131,20 @@ function buildQuestions(){
  let qs=[];
  words.forEach((w)=>{
   // Полные формулировки вопросов, но содержание всегда берётся из слов пользователя.
-  qs.push({id:w.id+"|enru",prompt:`Что означает «${w.en}»?`,answer:w.ru,type:"enru",word:w});
+  const kind=w.kind||((w.en.trim().split(/\s+/).length===1)?"word":(/[.!?]$/.test(w.en.trim())?"sentence":"phrase"));
+  const kindRu=kind==="word"?"слово":kind==="sentence"?"предложение":"фразу";
+  qs.push({id:w.id+"|enru",prompt:`Что означает ${kindRu} «${w.en}»?`,answer:w.ru,type:"enru",word:w});
   qs.push({id:w.id+"|ruen",prompt:`Как по-английски сказать: «${w.ru}»?`,answer:w.en,type:"ruen",word:w});
   if(w.example&&w.example.trim()){
    const escaped=w.en.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
    const blanked=w.example.replace(new RegExp(escaped,"i"),"_____");
    qs.push({id:w.id+"|sentence",prompt:`Какой английский вариант подходит к переводу «${w.ru}»?\nПример: ${blanked}`,answer:w.en,type:"sentence",word:w});
+  }
+  // Дополнительный вопрос с фразой помогает запоминать слово в контексте.
+  if((w.kind||"word")==="word" && !/[.!?]/.test(w.en.trim()) && w.en.trim().split(/\s+/).length===1){
+   const phrase=w.example&&w.example.trim()?w.example:`I want to learn the word "${w.en}".`;
+   const phraseRu=w.exampleRu||`Я хочу выучить слово «${w.ru}».`;
+   qs.push({id:w.id+"|context",prompt:`Что означает фраза «${phrase}»?`,answer:phraseRu,type:"enru",word:{...w,en:phrase,ru:phraseRu}});
   }
  });
  return qs;
