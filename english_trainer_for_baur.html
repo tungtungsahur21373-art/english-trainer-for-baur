@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#07111f">
+<title>ENGLISH TRAINER for Baur</title>
+<style>
+:root{--bg:#07111f;--panel:#12243c;--panel2:#0d1c30;--text:#f5f8ff;--muted:#9bb2d4;--mint:#32e2c0;--blue:#3bbcff;--gold:#ffd23f;--red:#ff5268;--green:#29d391}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#10243d 0%,var(--bg) 56%);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;min-height:100vh}
+button,input,textarea{font:inherit}button{cursor:pointer;-webkit-tap-highlight-color:transparent}
+.app{width:min(100%,560px);margin:auto;padding:calc(18px + env(safe-area-inset-top)) 18px calc(24px + env(safe-area-inset-bottom));min-height:100vh}
+header{text-align:center;padding:22px 0 26px}.book{font-size:42px;color:var(--mint);line-height:1.2}h1{font-size:clamp(27px,7vw,39px);letter-spacing:.5px;margin:10px 0 0;font-weight:900}h1 span{color:var(--mint)}.for{font-family:Georgia,serif;font-style:italic;font-size:30px;color:#b8d3ff;margin-top:0}.subtitle{color:var(--muted);font-size:15px;margin-top:9px}
+.menu{display:grid;gap:14px}.menu-card{display:flex;align-items:center;gap:16px;text-align:left;width:100%;padding:20px 16px;background:linear-gradient(120deg,rgba(21,42,69,.97),rgba(13,29,49,.97));border:1px solid #203a5c;border-radius:24px;color:var(--text);min-height:112px;box-shadow:0 8px 24px #0002}.menu-card:active,.btn:active,.answer:active{transform:scale(.99)}.menu-card .ico{flex:0 0 64px;height:64px;border:2px solid currentColor;border-radius:50%;display:grid;place-items:center;font-size:28px}.menu-card .copy{flex:1}.menu-card strong{display:block;font-size:21px;margin-bottom:6px}.menu-card small{display:block;color:var(--muted);font-size:14px;line-height:1.35}.chev{font-size:28px}.mint{color:var(--mint)}.blue{color:var(--blue)}.gold{color:var(--gold)}
+footer{text-align:center;color:#708bb1;margin:32px 0 8px;font-size:14px}.rocket{margin-top:12px;font-size:21px}
+.panel{background:rgba(14,29,49,.92);border:1px solid #203a5c;border-radius:24px;padding:20px;margin-top:12px}.topline{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}.back{background:#1b304b;color:#dbe8ff;border:0;border-radius:12px;padding:10px 13px}.eyebrow{color:var(--muted);font-size:13px}.screen-title{font-size:25px;margin:10px 0 18px}.btn{border:0;border-radius:14px;padding:14px 16px;font-weight:750;background:var(--mint);color:#042019;width:100%;margin-top:10px}.btn.secondary{background:#1d3655;color:var(--text);border:1px solid #315276}.btn.danger{background:#4a1d2b;color:#ffdbe1}.question-meta{color:var(--muted);font-size:13px;margin:4px 0 14px}.question{font-size:25px;font-weight:800;line-height:1.25;margin:12px 0 8px;overflow-wrap:anywhere}.listen{border:1px solid #2e5974;background:#102a40;color:var(--mint);padding:9px 12px;border-radius:12px;margin:8px 0 14px}.answers{display:grid;gap:10px;margin-top:12px}.answer{border:1px solid #294362;background:#152a44;color:var(--text);padding:15px 13px;border-radius:15px;text-align:left;min-height:54px;font-weight:650}.answer.correct{background:#103d32;border:2px solid var(--green);color:#b9ffe4}.answer.wrong{background:#4b1c2a;border:2px solid var(--red);color:#ffd5dc}.answer:disabled{cursor:default}.feedback{padding:13px;border-radius:14px;margin-top:13px;line-height:1.45}.feedback.ok{background:#103d32;color:#b9ffe4}.feedback.no{background:#4b1c2a;color:#ffd5dc}.field{display:block;margin:13px 0;color:var(--muted);font-size:14px}.field input,.field textarea{display:block;width:100%;margin-top:7px;padding:13px;border:1px solid #2a4567;border-radius:12px;background:#091626;color:var(--text);outline:none}.field textarea{min-height:70px;resize:vertical}.note{color:var(--muted);font-size:13px;line-height:1.45}.word-list{display:grid;gap:9px;margin-top:16px}.word-row{border:1px solid #263e5c;background:#102139;border-radius:14px;padding:12px;display:flex;gap:10px;align-items:center}.word-row .word-info{flex:1;min-width:0;overflow-wrap:anywhere}.word-row strong{display:block}.word-row small{color:var(--muted)}.mini{border:1px solid #315174;background:#1a3452;color:#dcecff;border-radius:10px;padding:8px 10px}.mini.delete{color:#ffb7c1}.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.stat{padding:16px;border-radius:16px;background:#122945;border:1px solid #294361}.stat strong{display:block;font-size:28px;color:var(--mint);margin-bottom:5px}.stat span{font-size:13px;color:var(--muted)}.history{padding:12px 0;border-bottom:1px solid #233b59;display:flex;justify-content:space-between;gap:10px}.empty{color:var(--muted);padding:20px;text-align:center}.hidden{display:none!important}.tiny{font-size:12px;color:#8ea6c8}
+@media(min-width:430px){.menu-card{padding:23px 20px}.menu-card strong{font-size:23px}.menu-card .ico{flex-basis:70px;height:70px}}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+ <div class="book">▱</div>
+ <h1>ENGLISH <span>TRAINER</span></h1>
+ <div class="for">for Baur</div>
+ <div class="subtitle">Твой личный тренажёр английского</div>
+</header>
+<main id="main"></main>
+<footer id="footer">Больше практики — больше результата<div class="rocket">♧ 🚀 ♧</div></footer>
+</div>
+<script>
+const START_WORDS = [
+["Speak","говорить"],["Learn","учить что-то"],["Study","изучать где-то / учиться"],["Much","много (с неисчисляемыми)"],["Many","много (с исчисляемыми)"],["Really","действительно"],["Often","часто"],["Read","читать"],["Do","делать"],["Can","мочь / уметь"],["Want","хотеть"],["Thing","вещь"],["Fluently","бегло"],["Correctly","правильно"],["Without","без"],["Mistake","ошибка"],["I’d like to","я бы хотел"],["My","мой / моя / моё"],["Later","позже"],["Different","разный / другой"],["Think","думать"],["Watch","смотреть"],["Soon","скоро"],["Together","вместе"],["Cost","стоить"],["Teach","учить кого-то"],["Yesterday","вчера"],["Today","сегодня"],["Tomorrow","завтра"],["but","но"],["Better","лучше"],["Need","нуждаться / нужно"],["more","больше / ещё"],["now","сейчас"],["service","сервис / обслуживание"],["spend","тратить / проводить время"],["about","о / около"],["talk","разговаривать о чём-то"],["lets","давай"],["another","ещё один / другой"],["other","другой / остальные"],["i don’t","я не…"],["he doesn’t","он не…"],["say","сказать / говорить"],["take","брать"],["use","использовать"],["ask","спрашивать / просить"],["give","давать"],["when","когда"]
+];
+const $=s=>document.querySelector(s);
+const main=$("#main");
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+let words, stats, usedQuestions, currentQuiz=null, editingId=null;
+function load(){
+ try{words=JSON.parse(localStorage.getItem("et_words"))||[];}catch{words=[]}
+ if(!words.length){words=START_WORDS.map((w,i)=>({id:"base"+i,en:w[0],ru:w[1],example:"",note:"",base:true}));saveWords();}
+ try{stats=JSON.parse(localStorage.getItem("et_stats"))||{tests:0,correct:0,best:0,streak:0,history:[]};}catch{stats={tests:0,correct:0,best:0,streak:0,history:[]}}
+ try{usedQuestions=JSON.parse(localStorage.getItem("et_used"))||[];}catch{usedQuestions=[]}
+}
+function saveWords(){localStorage.setItem("et_words",JSON.stringify(words))}
+function saveStats(){localStorage.setItem("et_stats",JSON.stringify(stats))}
+function saveUsed(){localStorage.setItem("et_used",JSON.stringify(usedQuestions))}
+function speak(text){if(!("speechSynthesis" in window)){alert("Озвучивание не поддерживается этим браузером.");return}speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(text);u.lang="en-US";u.rate=.83;let voices=speechSynthesis.getVoices();let v=voices.find(x=>x.lang==="en-US")||voices.find(x=>x.lang.startsWith("en"));if(v)u.voice=v;speechSynthesis.speak(u)}
+function goHome(){currentQuiz=null;editingId=null;renderHome()}
+function shell(title,body){main.innerHTML=`<section class="panel"><div class="topline"><button class="back" onclick="goHome()">← Меню</button><span class="eyebrow">ENGLISH TRAINER</span></div><h2 class="screen-title">${title}</h2>${body}</section>`}
+function renderHome(){
+ main.innerHTML=`<div class="menu">
+ <button class="menu-card" onclick="startQuiz()"><span class="ico mint">▶</span><span class="copy"><strong>Начать тест</strong><small>20 вопросов по твоим словам</small></span><span class="chev mint">›</span></button>
+ <button class="menu-card" onclick="renderAdd()"><span class="ico blue">＋</span><span class="copy"><strong>Добавить слово</strong><small>Слово, перевод и пример</small></span><span class="chev blue">›</span></button>
+ <button class="menu-card" onclick="renderRating()"><span class="ico gold">🏆</span><span class="copy"><strong>Рейтинг</strong><small>Твои результаты и достижения</small></span><span class="chev gold">›</span></button>
+ </div><p class="note" style="text-align:center;margin-top:20px">Слова озвучиваются на английском языке 🔊</p>`;
+}
+function renderAdd(){
+ editingId=null;
+ shell("Добавить слово",`<form id="wordForm">
+ <label class="field">Английское слово или фраза *<input id="en" required maxlength="120" placeholder="например, Speak"></label>
+ <label class="field">Перевод на русский *<input id="ru" required maxlength="220" placeholder="например, говорить"></label>
+ <label class="field">Пример на английском (необязательно)<textarea id="example" placeholder="I speak English."></textarea></label>
+ <label class="field">Заметка (необязательно)<textarea id="note" placeholder="Подсказка для себя"></textarea></label>
+ <button class="btn" type="submit">＋ Сохранить слово</button></form>
+ <p class="note">Новое слово сразу попадёт в будущие тесты и получит английское озвучивание.</p>
+ <div class="word-list">${words.slice().reverse().map(w=>`<div class="word-row"><div class="word-info"><strong>${esc(w.en)}</strong><small>${esc(w.ru)}</small></div><button class="mini" onclick="speak(${JSON.stringify(w.en).replace(/'/g,"&#39;")})" aria-label="Прослушать">🔊</button><button class="mini" onclick="editWord('${w.id}')">Изм.</button><button class="mini delete" onclick="deleteWord('${w.id}')">×</button></div>`).join("")}</div>`);
+ $("#wordForm").addEventListener("submit",e=>{e.preventDefault();let en=$("#en").value.trim(),ru=$("#ru").value.trim();if(!en||!ru)return;words.push({id:"w"+Date.now(),en,ru,example:$("#example").value.trim(),note:$("#note").value.trim(),base:false});saveWords();renderAdd();});
+}
+function editWord(id){
+ let w=words.find(x=>x.id===id);if(!w)return;editingId=id;
+ shell("Редактировать слово",`<form id="editForm"><label class="field">Английское слово или фраза *<input id="en" required value="${esc(w.en)}"></label><label class="field">Перевод *<input id="ru" required value="${esc(w.ru)}"></label><label class="field">Пример<textarea id="example">${esc(w.example||"")}</textarea></label><label class="field">Заметка<textarea id="note">${esc(w.note||"")}</textarea></label><button class="btn" type="submit">Сохранить изменения</button></form>`);
+ $("#editForm").addEventListener("submit",e=>{e.preventDefault();w.en=$("#en").value.trim();w.ru=$("#ru").value.trim();w.example=$("#example").value.trim();w.note=$("#note").value.trim();saveWords();renderAdd()});
+}
+function deleteWord(id){let w=words.find(x=>x.id===id);if(!w)return;if(!confirm(`Удалить слово «${w.en}»?`))return;words=words.filter(x=>x.id!==id);saveWords();renderAdd()}
+function renderRating(){
+ const hist=stats.history||[];
+ shell("Рейтинг",`<div class="stat-grid"><div class="stat"><strong>${stats.best||0}%</strong><span>Лучший результат</span></div><div class="stat"><strong>${stats.tests||0}</strong><span>Пройдено тестов</span></div><div class="stat"><strong>${stats.correct||0}</strong><span>Правильных ответов</span></div><div class="stat"><strong>${stats.streak||0}</strong><span>Текущая серия</span></div></div>
+ <h3 style="margin-top:24px">История тестов</h3>${hist.length?hist.slice().reverse().slice(0,10).map(h=>`<div class="history"><span>${esc(h.date)}<br><small class="tiny">${h.correct} из ${h.total} правильно</small></span><strong>${h.percent}%</strong></div>`).join(""):'<div class="empty">Пока нет результатов. Пройди первый тест!</div>'}
+ <button class="btn secondary" onclick="if(confirm('Сбросить историю и рейтинг?')){stats={tests:0,correct:0,best:0,streak:0,history:[]};saveStats();renderRating()}">Сбросить рейтинг</button>`);
+}
+function buildQuestions(){
+ let qs=[];
+ words.forEach((w,i)=>{
+  qs.push({id:w.id+"|enru",prompt:w.en,answer:w.ru,type:"enru",word:w});
+  qs.push({id:w.id+"|ruen",prompt:w.ru,answer:w.en,type:"ruen",word:w});
+  if(w.example&&w.example.trim())qs.push({id:w.id+"|sentence",prompt:`Какое слово пропущено?\n${w.example.replace(new RegExp(w.en.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),"i"),"_____")}`,answer:w.en,type:"sentence",word:w});
+ });
+ return qs;
+}
+function shuffled(a){return a.map(v=>[Math.random(),v]).sort((x,y)=>x[0]-y[0]).map(x=>x[1])}
+function startQuiz(){
+ if(words.length<4){shell("Мало слов",'<p>Добавь хотя бы 4 слова, чтобы начать тест.</p>');return}
+ let all=buildQuestions();let available=all.filter(q=>!usedQuestions.includes(q.id));
+ if(available.length<20){if(!confirm("Почти все вопросы уже встречались. Начать новый круг и снова перемешать вопросы?"))return;usedQuestions=[];available=all;}
+ let selected=shuffled(available).slice(0,Math.min(20,available.length));
+ currentQuiz={questions:selected,index:0,correct:0,answered:false,answers:[]};renderQuestion();
+}
+function makeOptions(q){
+ let pool;
+ if(q.type==="enru")pool=words.map(w=>w.ru).filter(x=>x!==q.answer);
+ else pool=words.map(w=>w.en).filter(x=>x!==q.answer);
+ pool=[...new Set(pool)];return shuffled([q.answer,...shuffled(pool).slice(0,3)]);
+}
+function renderQuestion(){
+ let q=currentQuiz.questions[currentQuiz.index];if(!q){finishQuiz();return}
+ currentQuiz.answered=false;
+ let opts=makeOptions(q);currentQuiz.currentOptions=opts;
+ let label=q.type==="enru"?"Выбери перевод":q.type==="ruen"?"Выбери английский вариант":"Выбери пропущенное слово";
+ let prompt=q.prompt.replace(/\n/g,"<br>");
+ shell("Тест",`<div class="question-meta">Вопрос ${currentQuiz.index+1} из ${currentQuiz.questions.length} · Правильно: ${currentQuiz.correct}</div><div class="eyebrow">${label}</div><div class="question">${esc(q.prompt).replace(/\n/g,"<br>")}</div>${q.type!=="ruen"?`<button class="listen" onclick="speak(${JSON.stringify(q.word.en).replace(/'/g,"&#39;")})">🔊 Прослушать английское слово</button>`:""}<div class="answers">${opts.map((o,i)=>`<button class="answer" data-index="${i}" onclick="chooseAnswer(${i})">${esc(o)}</button>`).join("")}</div><div id="feedback"></div><button id="next" class="btn hidden" onclick="nextQuestion()">${currentQuiz.index===currentQuiz.questions.length-1?"Завершить тест":"Далее →"}</button>`);
+}
+function chooseAnswer(i){
+ if(!currentQuiz||currentQuiz.answered)return;currentQuiz.answered=true;
+ let q=currentQuiz.questions[currentQuiz.index],selected=currentQuiz.currentOptions[i],ok=selected===q.answer;
+ if(ok)currentQuiz.correct++;
+ currentQuiz.answers.push({q,selected,ok});usedQuestions.push(q.id);saveUsed();
+ document.querySelectorAll(".answer").forEach((b,j)=>{b.disabled=true;if(currentQuiz.currentOptions[j]===q.answer)b.classList.add("correct");if(j===i&&!ok)b.classList.add("wrong")});
+ $("#feedback").innerHTML=ok?`<div class="feedback ok">✓ Правильно!<br>${esc(q.word.en)} — ${esc(q.word.ru)}</div>`:`<div class="feedback no">✕ Неправильно.<br>Правильный ответ: <strong>${esc(q.answer)}</strong><br>${esc(q.word.en)} — ${esc(q.word.ru)}</div>`;
+ $("#next").classList.remove("hidden");
+}
+function nextQuestion(){if(!currentQuiz.answered)return;currentQuiz.index++;renderQuestion()}
+function finishQuiz(){
+ let total=currentQuiz.questions.length,correct=currentQuiz.correct,percent=Math.round(correct/total*100);
+ stats.tests++;stats.correct+=correct;stats.best=Math.max(stats.best||0,percent);stats.streak=percent===100?(stats.streak||0)+1:0;
+ stats.history=stats.history||[];stats.history.push({date:new Date().toLocaleDateString("ru-RU"),correct,total,percent});stats.history=stats.history.slice(-50);saveStats();
+ let misses=currentQuiz.answers.filter(a=>!a.ok);
+ shell("Тест завершён",`<div style="text-align:center;padding:10px 0 20px"><div style="font-size:52px">${percent>=80?"🏆":percent>=50?"💪":"📚"}</div><div style="font-size:42px;font-weight:900;color:var(--mint)">${correct}/${total}</div><div style="color:var(--muted);font-size:17px">${percent}% правильных ответов</div></div><h3>Ошибки</h3>${misses.length?misses.map(a=>`<div class="history"><span><strong>${esc(a.q.prompt)}</strong><br><small class="tiny">Твой ответ: ${esc(a.selected)}</small><br><small class="tiny">Правильно: ${esc(a.q.answer)}</small></span><button class="mini" onclick="speak(${JSON.stringify(a.q.word.en).replace(/'/g,"&#39;")})">🔊</button></div>`).join(""):'<div class="empty">Отлично! Ошибок нет 🎉</div>'}<button class="btn" onclick="startQuiz()">Пройти ещё раз</button><button class="btn secondary" onclick="renderRating()">Открыть рейтинг</button>`);
+}
+load();renderHome();
+</script>
+</body>
+</html>
