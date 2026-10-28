@@ -45,7 +45,33 @@ function load(){
 function saveWords(){localStorage.setItem("et_words",JSON.stringify(words))}
 function saveStats(){localStorage.setItem("et_stats",JSON.stringify(stats))}
 function saveUsed(){localStorage.setItem("et_used",JSON.stringify(usedQuestions))}
-function speak(text){if(!("speechSynthesis" in window)){alert("Озвучивание не поддерживается этим браузером.");return}speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(text);u.lang="en-US";u.rate=.83;let voices=speechSynthesis.getVoices();let v=voices.find(x=>x.lang==="en-US")||voices.find(x=>x.lang.startsWith("en"));if(v)u.voice=v;speechSynthesis.speak(u)}
+function speak(text){
+ const synth=window.speechSynthesis;
+ if(!synth||typeof window.SpeechSynthesisUtterance==="undefined"){
+   alert("Этот браузер не поддерживает встроенную озвучку. Открой приложение в Safari и проверь настройки звука iPhone.");return;
+ }
+ const phrase=String(text||"").trim();if(!phrase)return;
+ try{
+   synth.cancel();
+   const utterance=new SpeechSynthesisUtterance(phrase);
+   utterance.lang="en-US";
+   utterance.rate=0.82;
+   utterance.pitch=1;
+   const chooseVoice=()=>{
+     const voices=synth.getVoices()||[];
+     const voice=voices.find(v=>/^en-US$/i.test(v.lang))||voices.find(v=>/^en(-|$)/i.test(v.lang));
+     if(voice)utterance.voice=voice;
+   };
+   chooseVoice();
+   utterance.onerror=()=>{};
+   synth.resume();
+   synth.speak(utterance);
+   // Some iOS WebKit versions load their voice list after the first request.
+   if(synth.getVoices().length===0){
+     synth.onvoiceschanged=()=>{chooseVoice();synth.onvoiceschanged=null;};
+   }
+ }catch(err){alert("Не удалось запустить озвучку. Попробуй открыть приложение в Safari.");}
+}
 function goHome(){currentQuiz=null;editingId=null;renderHome()}
 function shell(title,body){main.innerHTML=`<section class="panel"><div class="topline"><button class="back" onclick="goHome()">← Меню</button><span class="eyebrow">ENGLISH TRAINER</span></div><h2 class="screen-title">${title}</h2>${body}</section>`}
 function renderHome(){
